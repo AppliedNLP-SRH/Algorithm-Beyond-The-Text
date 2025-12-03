@@ -28,3 +28,15 @@ numpy>=1.24.0
 
 # Jupyter notebook widgets (optional - suppresses tqdm warnings)
 ipywidgets>=8.0.0
+
+# Data analysis + notebooks + NLP
+pandas>=1.5.3
+nltk>=3.8.1
+ipykernel>=6.29.0
+joblib>=1.3.2
+
+# Optional — useful for many NLP tasks
+regex>=2023.10.3
+
+# spaCy (popular for n-grams, tokenization, pipelines)
+spacy>=3.7.2
