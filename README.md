@@ -1,7 +1,7 @@
-# Project X 
-Group members: Y, Z
+# Final Project 
+Group members: Daved Tawdros, Jakhongir Erkinov, Joranas Cigas, Chriswin Baiju 
 
-This repository contains the materials for **Project X**.  
+This repository contains the materials for **Final Project**.  
 - Presentation Slides: see [`slides/`](./slides/) folder  
 - Notebooks: see [`notebooks/`](./notebooks/) folder
 - Data: when you access correct data, place it in [`data/`](./data/) folder
