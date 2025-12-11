@@ -1,90 +1,9 @@
-# The Anna Karenina Paradox — A Digital Reading of Tolstoy
+## The Anna Karenina Paradox —
 
-**Short title:** The Anna Karenina Paradox 
-**Author(s):** Joranas Cigas, Jakhongir Erkinov, Tawdros Daved, Chriswin Baiju
-
----
-
-## Project description (TL;DR)
-
-This project uses lightweight NLP methods to compare two Tolstoy novels —  *Anna Karenina* — with an eye toward **character findings**. The motivating question is
-
-1. **How similar or different is Leo Tolstoy’s style across these two long novels?**  
-2. **How does book length and internal structure affect measures of predictability (compressibility, repeated phrases, sentence patterns, etc.)?**
-
-One narrative angle — *“The Anna Karenina paradox”* — asks whether Anna is the clear central figure when other major characters (e.g., Levin) share narrative weight. We use quantitative measures (compression ratio, n-grams/PMI, sentence patterns, paragraph compressibility) to provide data-driven context for such literary readings.
-
-This repository contains source data, Jupyter notebooks for analysis, and exported visualizations.
+A Digital Reading of TolstoyShort title: The Anna Karenina ParadoxAuthor(s): Joranas Cigas, Jakhongir Erkinov, Tawdros Daved, Chriswin Baiju📖 Project Description (TL;DR)This project uses computational literary analysis to investigate a central question in Leo Tolstoy's Anna Karenina: Why is the book named after Anna when Konstantin Levin has just as much narrative weight?This is the "Anna Karenina Paradox":Quantity: Levin appears in just as many chapters and has nearly equal "screen time" as Anna.Structure: The novel is famously a "double-plot" structure (Anna’s tragedy vs. Levin’s spiritual journey).The Question: Is Anna the true protagonist, or is she just the more dramatic half of a balanced equation?To solve this, we applied four specific quantitative measures to the text. Our results revealed a fascinating 2-2 split, proving that the novel relies on a perfect structural tension between its two leads.🏆 The Scorecard: Anna vs. LevinWe tested "Protagonist Status" using four distinct NLP metrics. The results show exactly how Tolstoy balanced the novel.MetricWinnerWhat it MeasuresInterpretation1. Total MentionsLevinRaw frequency of name occurrences.Levin is technically the most present character. He is the steady "background radiation" of the novel.2. Network CentralityAnna"Hub" status in the social graph.Anna connects more distinct social groups (Karenin, Vronsky, Oblonskys). She is the social gravity of the book.3. Timeline / SentimentLevinPresence across the full narrative arc.Anna vanishes (dies) before the end. Levin carries the narrative through to the final philosophical conclusion.4. Semantic CoherenceAnnaParagraph-level topical focus.Anna's sections have lower entropy/higher focus (high drama/action). Levin's are more "wandering" (philosophy/farming). Anna drives the plot; Levin drives the theme.Conclusion: The book is named Anna Karenina not because she is the "main" character by volume, but because she provides the narrative intensity (Coherence/Centrality) that breaks the narrative stability (Mentions/Timeline) provided by Levin.📂 Repository StructureThis repository contains source data, Jupyter notebooks for analysis, and exported visualizations.data/ - Raw .txt files (Anna Karenina).notebooks/ - Analysis scripts (see below).results/ - Generated plots (Network graphs, Coherence density plots) and CSVs.📑 Analysis Modules1. The "Focus" Test (Semantic Coherence)Goal: Determine who drives the plot intensity.Method: We use sentence-transformers (S-BERT) to measure the semantic similarity of sentences within paragraphs.Finding: Anna's paragraphs are "tighter" and more focused (Action/Drama). Levin's are "looser" (Philosophy/Musing).Notebook: paragraph_coherence_anna_vs_levin.ipynb2. The "Social" Test (Network Centrality)Goal: Determine who is more essential to the character web.Method: We build a co-occurrence graph of all major characters.Finding: Anna has higher "Betweenness Centrality"—if you remove her, the novel's social network falls apart. Levin is more isolated.3. The "Volume" Test (Mentions & Frequency)Goal: Determine who dominates the page.Method: N-gram analysis and named entity counting.Finding: Levin actually "wins" on raw counts, supporting the idea that this is a dual-protagonist novel.
 
 ---
 
-## Research question
-
-**Primary:** How do *War and Peace* and *Anna Karenina* compare in terms of textual predictability and repetition, at book and sub-book (segment / paragraph) levels?
-
-**Secondary / interpretive:** Do measures of redundancy correlate with narrative features (dialogue vs description, repeated phrases, or long lists), and what does that tell us about Tolstoy’s stylistic choices?
-
----
-
-## What’s in this repo (folder structure)
-
-
----
-
-## 📑 Session Outline
-
-### Topic: Phrases & Collocations
-
-This session explores multi-word expressions and phrase patterns in literary texts. Using two works by the same author (as an example Alice's Adventures in Wonderland and Through the Looking-Glass), you'll learn to:
-
-1. **Bigrams & Trigrams** ([`1_AppliedNLP_Session2_Bi_Trigrams.ipynb`](./notebooks/1_AppliedNLP_Session2_Bi_Trigrams.ipynb))
-   - Compute frequent bigrams and trigrams across two texts
-   - Compare phrase frequencies using normalized rates
-   - Identify distinctive phrases for each work
-   - Visualize most characteristic multi-word expressions
-
-2. **Pointwise Mutual Information (PMI)** ([`2_AppliedNLP_Session2_PMI.ipynb`](./notebooks/2_AppliedNLP_Session2_PMI.ipynb))
-   - Measure collocation strength using PMI scores
-   - Identify strongly associated word pairs beyond raw frequency
-   - Compare PMI-based collocations across works
-   - Export reproducible analysis artifacts
-
-3. **POS Pattern Frequency** ([`3_AppliedNLP_Session2_POS_Patterns.ipynb`](./notebooks/3_AppliedNLP_Session2_POS_Patterns.ipynb))
-   - Analyze grammatical patterns in bigrams (ADJ+NOUN, VERB+NOUN, etc.)
-   - Apply spaCy POS tagging for syntactic analysis
-   - Visualize distribution of POS patterns
-   - Compare syntactic phrase structure across texts
-
-4. **Phrase Diversity (n-gram TTR)** ([`4_AppliedNLP_Session2_Phrase_Diversity.ipynb`](./notebooks/4_AppliedNLP_Session2_Phrase_Diversity.ipynb))
-   - Measure phrase variety using Type-Token Ratio (TTR)
-   - Compare lexical/phrasal diversity across works
-   - Analyze diversity trends by section/chapter
-   - Interpret TTR as indicator of stylistic formulaicity vs. variety
-
-5. **Collocation Network** ([`5_AppliedNLP_Session2_Collocation_Network.ipynb`](./notebooks/5_AppliedNLP_Session2_Collocation_Network.ipynb))
-   - Visualize word collocations as network graphs
-   - Identify hub words and collocation clusters
-   - Explore phrase structure through network topology
-   - Compare collocation patterns between texts
-
-### Key Concepts
-- **N-grams**: Contiguous sequences of n tokens (bigrams, trigrams)
-- **Collocations**: Words that frequently co-occur in predictable patterns
-- **PMI**: Statistical measure of association between words in bigrams
-- **TTR**: Ratio of unique to total n-grams, measuring diversity
-- **POS patterns**: Grammatical templates underlying phrases
-
-### Data
-All notebooks work with Project Gutenberg text in the [`data/`](./data/) folder:
-- `The Project Gutenberg eBook of Anna Karenina, by Leo Tolstoy.txt` — Anna Karenina by Leo Tolstoy.
-
-Notebooks include robust preprocessing to strip Gutenberg headers, normalize quotes, and handle encoding artifacts. For your texts, you should implement different preprocessing steps if needed.
-
----
-- Read more about this project on Medium: <Medium_Article_link>
----
-
----
 ## 🚀 Environment Setup
 
 Before starting, please **fork this repository** and create a fresh Python virtual environment.  
@@ -144,3 +63,25 @@ Deactivate the environment when you’re done:
 ```bash
 deactivate
 ```
+## Key Libraries used:
+
+sentence-transformers (for semantic analysis)
+
+spacy (for entity recognition)
+
+networkx (for social graphs)
+
+seaborn / matplotlib (for visualization)
+
+## 📜 Session Outline (For Coursework)
+In addition to the main project, this repo contains standard NLP session notebooks covering:
+
+Bigrams & Trigrams (1_AppliedNLP_Session2_Bi_Trigrams.ipynb)
+
+Pointwise Mutual Information (PMI) (2_AppliedNLP_Session2_PMI.ipynb)
+
+POS Pattern Frequency (3_AppliedNLP_Session2_POS_Patterns.ipynb)
+
+Phrase Diversity (n-gram TTR) (4_AppliedNLP_Session2_Phrase_Diversity.ipynb)
+
+Collocation Network (5_AppliedNLP_Session2_Collocation_Network.ipynb)
