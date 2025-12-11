@@ -5,15 +5,15 @@ Short title: The Anna Karenina Paradox
 
 ## 📖 Project Description 
 This project uses computational literary analysis to investigate a central question in Leo Tolstoy's Anna Karenina:
-## Why is the book named after Anna when Konstantin Levin has just as much narrative weight?
+### Why is the book named after Anna when Konstantin Levin has just as much narrative weight?
 
-This is the "Anna Karenina Paradox":
+## This is the "Anna Karenina Paradox":
 
-### Quantity: Levin appears in just as many chapters and has nearly equal "screen time" as Anna.
+Quantity: Levin appears in just as many chapters and has nearly equal "screen time" as Anna.
 
-### Structure: The novel is famously a "double-plot" structure (Anna’s tragedy vs. Levin’s spiritual journey).
+Structure: The novel is famously a "double-plot" structure (Anna’s tragedy vs. Levin’s spiritual journey).
 
-## The Question: Is Anna the true protagonist, or is she just the more dramatic half of a balanced equation?
+The Question: Is Anna the true protagonist, or is she just the more dramatic half of a balanced equation?
 
 To solve this, we applied four specific quantitative measures to the text. Our results revealed a fascinating 2-2 split, proving that the novel relies on a perfect structural tension between its two leads.
 
