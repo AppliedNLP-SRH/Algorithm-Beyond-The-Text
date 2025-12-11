@@ -1,4 +1,4 @@
-## The Anna Karenina Paradox — A Digital Reading of Tolstoy
+# The Anna Karenina Paradox — A Digital Reading of Tolstoy
 Short title: The Anna Karenina Paradox
 
 ## Project members: Joranas Cigas, Jakhongir Erkinov, Daved Tawdros, Chriswin Baiju
