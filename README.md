@@ -41,7 +41,7 @@ All required libraries are listed in `requirements.txt`.
 
 ```bash
 # Select Python version (if using pyenv)
-pyenv local 3.11.3
+pyenv local 3.11.9
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ### Windows (PowerShell)
 ```bash
 # Select Python version (if using pyenv)
-pyenv local 3.11.3
+pyenv local 3.11.9
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -69,7 +69,7 @@ pip install -r requirements.txt
 ### Windows (Git Bash)
 ```bash
 # Select Python version (if using pyenv)
-pyenv local 3.11.3
+pyenv local 3.11.9
 
 # Create and activate virtual environment
 python -m venv .venv
