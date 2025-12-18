@@ -17,7 +17,7 @@ The Question: Is Anna the true protagonist, or is she just the more dramatic hal
 
 To solve this, we applied four specific quantitative measures to the text. Our results revealed a fascinating 2-2 split, proving that the novel relies on a perfect structural tension between its two leads.
 
-## To read more see our medium article <https://medium.com/@davidayad.2006/the-anna-karenina-paradox-a-computational-reading-using-python-791380cdc682>
+### To read more see our medium article <https://medium.com/@davidayad.2006/the-anna-karenina-paradox-a-computational-reading-using-python-791380cdc682>
 
 ## 🏆 The Scorecard: Anna vs. Levin
 
